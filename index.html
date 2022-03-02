@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -15,28 +16,30 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hanfeii.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+    <meta name="description" content="My Personal Blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HanFei">
+<meta property="og:url" content="https://hanfeii.top/index.html">
+<meta property="og:site_name" content="HanFei">
+<meta property="og:description" content="My Personal Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="hanfei">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="https://hanfeii.top/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo</title>
+<title>HanFei</title>
   
 
 
@@ -55,7 +58,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
   </div>
 
@@ -63,9 +66,10 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">HanFei</h1>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">走好脚下的路</p>
   </div>
 
   <div class="site-nav-right">
@@ -94,10 +98,10 @@
     <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -109,20 +113,20 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
+  <p class="site-author-name" itemprop="name">hanfei</p>
+  <div class="site-description" itemprop="description">My Personal Blog</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
@@ -139,10 +143,11 @@
     </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -159,16 +164,278 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/23/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="hanfei">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | HanFei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">通过Hexo和GitHub Pages搭建博客</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-26 20:58:21" itemprop="dateCreated datePublished" datetime="2022-02-26T20:58:21+08:00">2022-02-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-02 10:51:45" itemprop="dateModified" datetime="2022-03-02T10:51:45+08:00">2022-03-02</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h1><p>一个快速、简洁且高效的博客框架，使用<a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/syntax">MARKDOWN</a>引擎解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h1 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://git-scm.com/">Git</a></p>
+</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Node-js版本限制"><a href="#Node-js版本限制" class="headerlink" title="Node.js版本限制"></a>Node.js版本限制</h2><table>
+<thead>
+<tr>
+<th align="left">Hexo 版本</th>
+<th align="left">最低兼容 Node.js 版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">6.0+</td>
+<td align="left">12.13.0</td>
+</tr>
+<tr>
+<td align="left">5.0+</td>
+<td align="left">10.13.0</td>
+</tr>
+<tr>
+<td align="left">4.1 - 4.2</td>
+<td align="left">8.10</td>
+</tr>
+<tr>
+<td align="left">4.0</td>
+<td align="left">8.6</td>
+</tr>
+<tr>
+<td align="left">3.3 - 3.9</td>
+<td align="left">6.9</td>
+</tr>
+<tr>
+<td align="left">3.2 - 3.3</td>
+<td align="left">0.12</td>
+</tr>
+<tr>
+<td align="left">3.0 - 3.1</td>
+<td align="left">0.10 or iojs</td>
+</tr>
+<tr>
+<td align="left">0.0.1 - 2.8</td>
+<td align="left">0.10</td>
+</tr>
+</tbody></table>
+<h1 id="如何建站："><a href="#如何建站：" class="headerlink" title="如何建站："></a>如何建站：</h1><h2 id="搭建Hexo脚手架"><a href="#搭建Hexo脚手架" class="headerlink" title="搭建Hexo脚手架"></a>搭建Hexo脚手架</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">hexo init &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash"><span class="built_in">cd</span> &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">npm install</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &lt;blog name&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="展示博客"><a href="#展示博客" class="headerlink" title="展示博客"></a>展示博客</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>Hexo具体使用细节请参考<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">中文官方文档</a></p>
+</blockquote>
+<h1 id="托管到GitHub-Pages"><a href="#托管到GitHub-Pages" class="headerlink" title="托管到GitHub Pages"></a>托管到<a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a></h1><h2 id="1-新建Repo"><a href="#1-新建Repo" class="headerlink" title="1. 新建Repo"></a>1. 新建Repo</h2><p>在GitHub上新建一个Repo，并且名称命名为username.github.io</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226213333028.png"></p>
+<h2 id="2-将本地代码库关联并Push到远程Repo"><a href="#2-将本地代码库关联并Push到远程Repo" class="headerlink" title="2. 将本地代码库关联并Push到远程Repo"></a>2. 将本地代码库关联并Push到远程Repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">git remote add origin git@github.com:FaithHan/faithhan.github..git</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">git push</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="GitHub-Actions实现自动部署"><a href="#GitHub-Actions实现自动部署" class="headerlink" title="GitHub Actions实现自动部署"></a>GitHub Actions实现自动部署</h1><p>每次修改完博客后都需要重新生成静态文件并部署，我们可以利用GitHub Actions实现自动化，只要将代码push到远端就能自动部署，真正实现”所写即所得”。</p>
+<p>我们需要在.github&#x2F;workflows路径下新建deploy.yml文件，并Push到Repo中</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">CI</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> [<span class="string">master</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">16.</span><span class="string">x</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&#x27;16&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">NPM</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.OS</span> <span class="string">&#125;&#125;-npm-cache</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            $&#123;&#123; runner.OS &#125;&#125;-npm-cache</span></span><br><span class="line"><span class="string"></span>      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br></pre></td></tr></table></figure>
+
+<p>每次master提交后，就会自动触发流水线，生成静态文件并部署<br><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226215237952.png"></p>
+<p>​    </p>
+<h1 id="自定义博客域名"><a href="#自定义博客域名" class="headerlink" title="自定义博客域名"></a>自定义博客域名</h1><p>GitHub Pages默认的博客域名是<strong>username.github.io</strong>,我们可以为其绑定自定义的域名，本人采用阿里云。</p>
+<h3 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1. 购买域名"></a>1. 购买域名</h3><p>在<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/domain/searchresult/#/?keyword=hanfeii&suffix=top">阿里云域名中心</a>购买域名（需要填写个人信息并实名认证,审核过后即可使用）</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226220823622.png"></p>
+<h3 id="2-解析设置"><a href="#2-解析设置" class="headerlink" title="2. 解析设置"></a>2. 解析设置</h3><p>在控制台打开自己想要配置的域名，进行解析配置</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226221842307.png" alt="image-20220226221842307"></p>
+<p>添加两条解析配置到github博客域名</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226222001037.png" alt="image-20220226222001037"></p>
+<h3 id="3-CNAME文件"><a href="#3-CNAME文件" class="headerlink" title="3. CNAME文件"></a>3. CNAME文件</h3><p>在source文件夹中新建CNAME文件（在source中新建CNAME可以防止每次部署文件被覆盖），填写自定义博客域名并提交，待生效后即可从自定义域名中访问博客</p>
+<h1 id="添加Https证书"><a href="#添加Https证书" class="headerlink" title="添加Https证书"></a>添加Https证书</h1><p>默认的自定义域名是不带Https的，为了能够在浏览器地址栏里看到小锁头，我们还要做接下来的配置</p>
+<h3 id="1-利用阿里云SSL证书"><a href="#1-利用阿里云SSL证书" class="headerlink" title="1. 利用阿里云SSL证书"></a>1. 利用阿里云SSL证书</h3><p>这里我们可以利用<a target="_blank" rel="noopener" href="https://yundun.console.aliyun.com/?spm=5176.12818093.ProductAndService--ali--widget-home-product-recent.dre0.5adc16d0fjTJAK&p=cas#/certExtend/free">阿里云数字证书管理服务</a>购买免费的SSL证书，购买完毕后点击创建证书会生成一个新的证书，之后点击证书申请，为我们新建的证书做一些配置。</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226222823971.png" alt="image-20220226222823971"></p>
+<p>将证书绑定到自己的域名下，并填写相关信息，审核生效后即可。</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226223107531.png" alt="image-20220226223107531"></p>
+<p>到这一步我们已经可以通过Https协议正常访问我们的自定义博客站点了。</p>
+<h3 id="2-开启强制Https访问"><a href="#2-开启强制Https访问" class="headerlink" title="2.  开启强制Https访问"></a>2.  开启强制Https访问</h3><p>如果我们想强制走Https访问，需要在GitHub里做些配置，只需要勾选设置中Enforce HTTPS 这个选项即可</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226223528037.png" alt="image-20220226223528037"></p>
+<blockquote>
+<p>如果Https不生效，我们可以先把自定义域名去除，生效后重新加回来即可</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/02/24/%E4%BD%BF%E7%94%A8rinetd%E8%BD%AC%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanfei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | HanFei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/24/%E4%BD%BF%E7%94%A8rinetd%E8%BD%AC%E5%8F%91/" class="post-title-link" itemprop="url">使用rinetd转发TCP连接</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-24 14:40:31" itemprop="dateCreated datePublished" datetime="2022-02-24T14:40:31+08:00">2022-02-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-02 10:51:45" itemprop="dateModified" datetime="2022-03-02T10:51:45+08:00">2022-03-02</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>公司内部由于安全限制，在本地无法直接连接线上数据库进行查询操作，需要通过内网开发机做转发。在工具选择上，团队采用了rinetd。</p>
+<h1 id="rinetd简介"><a href="#rinetd简介" class="headerlink" title="rinetd简介"></a>rinetd简介</h1><p>rinetd是一个支持TCP协议的端口转发工具，它是一个单进程服务，可以处理任意数量的地址端口对转发（通过在&#x2F;etc&#x2F;rinetd.conf中进行配置）</p>
+<p><a target="_blank" rel="noopener" href="http://www.rinetd.com/"><img src="/2022/02/24/%E4%BD%BF%E7%94%A8rinetd%E8%BD%AC%E5%8F%91/header.jpeg" title="官方网站"></a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="1-编译安装"><a href="#1-编译安装" class="headerlink" title="1.编译安装"></a>1.编译安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">curl -LO <span class="string">&#x27;http://www.rinetd.com/download/rinetd.tar.gz&#x27;</span></span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">tar xvzf rinetd.tar.gz</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash"><span class="built_in">cd</span> rinetd</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">sed -i <span class="string">&#x27;s/65536/65535/g&#x27;</span> rinetd.c <span class="comment"># 修改端口范围，否则会报错</span></span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">make</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">sudo make install</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-MacOS安装"><a href="#2-MacOS安装" class="headerlink" title="2.MacOS安装"></a>2.MacOS安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">brew install rinetd</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="3-Debian-x2F-Ubuntu"><a href="#3-Debian-x2F-Ubuntu" class="headerlink" title="3.Debian &#x2F; Ubuntu"></a>3.Debian &#x2F; Ubuntu</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">sudo apt update</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">sudo apt install rinetd</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-在-RHEL-x2F-CentOS-上借助-yum-安装"><a href="#4-在-RHEL-x2F-CentOS-上借助-yum-安装" class="headerlink" title="4.在 RHEL &#x2F; CentOS 上借助 yum 安装"></a>4.在 RHEL &#x2F; CentOS 上借助 yum 安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">sudo vim /etc/yum.repos.d/nux-misc.repo</span></span><br><span class="line"></span><br><span class="line">[nux-misc]</span><br><span class="line">name=Nux Misc</span><br><span class="line">baseurl=http://li.nux.ro/download/nux/misc/el6/x86_64/</span><br><span class="line">enabled=0</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro</span><br><span class="line"></span><br><span class="line">sudo yum --enablerepo=nux-misc install rinetd</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>配置文件路径为 &#x2F;etc&#x2F;rinetd.conf</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># this is the configuration file for rinetd, the internet redirection server</span></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># you may specify global allow and deny rules here</span></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">only ip addresses are matched, hostnames cannot be specified here</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">the wildcards you may use are * and ?</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># allow 192.168.2.*</span></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">deny 192.168.2.1?</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># forwarding rules come here</span></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># you may specify allow and deny rules after a specific forwarding rule</span></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">to apply to only that forwarding rule</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># bindadress    bindport  connectaddress  connectport</span></span></span><br><span class="line">0.0.0.0 6379    r-ly25ac35fxxxxx.redis.rds.aliyuncs.com 6379</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">logging information</span></span><br><span class="line">logfile /var/log/rinetd.log</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">uncomment the following line <span class="keyword">if</span> you want web-server style logfile format</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">logcommon</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a target="_blank" rel="noopener" href="http://manpages.ubuntu.com/manpages/bionic/man8/rinetd.8.html">http://manpages.ubuntu.com/manpages/bionic/man8/rinetd.8.html</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/322487244">https://zhuanlan.zhihu.com/p/322487244</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013755439/article/details/82079669">https://blog.csdn.net/u013755439/article/details/82079669</a><br><a target="_blank" rel="noopener" href="https://www.khow.me/blog/easily-forwarding-arbitrary-tcp-connections-with-rinetd.html">https://www.khow.me/blog/easily-forwarding-arbitrary-tcp-connections-with-rinetd.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/02/23/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanfei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | HanFei">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -181,16 +448,16 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Posted on</span>
+      <span class="post-meta-item-text">发表于</span>
 
-      <time title="Created: 2022-02-23 14:40:31" itemprop="dateCreated datePublished" datetime="2022-02-23T14:40:31+00:00">2022-02-23</time>
+      <time title="创建时间：2022-02-23 14:40:31" itemprop="dateCreated datePublished" datetime="2022-02-23T14:40:31+08:00">2022-02-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-03-01 11:18:20" itemprop="dateModified" datetime="2022-03-01T11:18:20+00:00">2022-03-01</time>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-02 10:51:45" itemprop="dateModified" datetime="2022-03-02T10:51:45+08:00">2022-03-02</time>
     </span>
 
   
@@ -272,9 +539,9 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">hanfei</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
     </div>
@@ -282,7 +549,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 

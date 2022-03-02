@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hanfeii.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Hexo简介一个快速、简洁且高效的博客框架，使用MARKDOWN引擎解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 Hexo安装环境准备 Node.js  Git   安装1$ npm install -g hexo-cli    Node.js版本限制   Hexo 版本 最低兼容 Node.js 版本    6.0+ 12.13.0   5.0+ 10.13.0   4.1 - 4.2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通过Hexo和GitHub Pages搭建博客">
+<meta property="og:url" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="HanFei">
+<meta property="og:description" content="Hexo简介一个快速、简洁且高效的博客框架，使用MARKDOWN引擎解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 Hexo安装环境准备 Node.js  Git   安装1$ npm install -g hexo-cli    Node.js版本限制   Hexo 版本 最低兼容 Node.js 版本    6.0+ 12.13.0   5.0+ 10.13.0   4.1 - 4.2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226213333028.png">
+<meta property="og:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226215237952.png">
+<meta property="og:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226220823622.png">
+<meta property="og:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226221842307.png">
+<meta property="og:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226222001037.png">
+<meta property="og:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226222823971.png">
+<meta property="og:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226223107531.png">
+<meta property="og:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226223528037.png">
+<meta property="article:published_time" content="2022-02-26T12:58:21.000Z">
+<meta property="article:modified_time" content="2022-03-02T02:51:45.328Z">
+<meta property="article:author" content="hanfei">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226213333028.png">
+
+
+<link rel="canonical" href="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/","path":"2022/02/26/使用Hexo和GitHubPages搭建博客/","title":"通过Hexo和GitHub Pages搭建博客"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>通过Hexo和GitHub Pages搭建博客 | HanFei</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">HanFei</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走好脚下的路</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Hexo简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Hexo安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">2.1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6"><span class="nav-number">2.3.</span> <span class="nav-text">Node.js版本限制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%BB%BA%E7%AB%99%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">如何建站：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAHexo%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="nav-number">3.1.</span> <span class="nav-text">搭建Hexo脚手架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">3.2.</span> <span class="nav-text">新建博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%95%E7%A4%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">3.3.</span> <span class="nav-text">展示博客</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%98%E7%AE%A1%E5%88%B0GitHub-Pages"><span class="nav-number">4.</span> <span class="nav-text">托管到GitHub Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BARepo"><span class="nav-number">4.1.</span> <span class="nav-text">1. 新建Repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%BA%93%E5%85%B3%E8%81%94%E5%B9%B6Push%E5%88%B0%E8%BF%9C%E7%A8%8BRepo"><span class="nav-number">4.2.</span> <span class="nav-text">2. 将本地代码库关联并Push到远程Repo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-Actions%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="nav-number">5.</span> <span class="nav-text">GitHub Actions实现自动部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D"><span class="nav-number">6.</span> <span class="nav-text">自定义博客域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D"><span class="nav-number">6.0.1.</span> <span class="nav-text">1. 购买域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%A7%A3%E6%9E%90%E8%AE%BE%E7%BD%AE"><span class="nav-number">6.0.2.</span> <span class="nav-text">2. 解析设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-CNAME%E6%96%87%E4%BB%B6"><span class="nav-number">6.0.3.</span> <span class="nav-text">3. CNAME文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0Https%E8%AF%81%E4%B9%A6"><span class="nav-number">7.</span> <span class="nav-text">添加Https证书</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%A9%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91SSL%E8%AF%81%E4%B9%A6"><span class="nav-number">7.0.1.</span> <span class="nav-text">1. 利用阿里云SSL证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%BC%80%E5%90%AF%E5%BC%BA%E5%88%B6Https%E8%AE%BF%E9%97%AE"><span class="nav-number">7.0.2.</span> <span class="nav-text">2.  开启强制Https访问</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">hanfei</p>
+  <div class="site-description" itemprop="description">My Personal Blog</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanfei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="通过Hexo和GitHub Pages搭建博客 | HanFei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          通过Hexo和GitHub Pages搭建博客
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-26 20:58:21" itemprop="dateCreated datePublished" datetime="2022-02-26T20:58:21+08:00">2022-02-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-02 10:51:45" itemprop="dateModified" datetime="2022-03-02T10:51:45+08:00">2022-03-02</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h1><p>一个快速、简洁且高效的博客框架，使用<a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/syntax">MARKDOWN</a>引擎解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h1 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://git-scm.com/">Git</a></p>
+</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Node-js版本限制"><a href="#Node-js版本限制" class="headerlink" title="Node.js版本限制"></a>Node.js版本限制</h2><table>
+<thead>
+<tr>
+<th align="left">Hexo 版本</th>
+<th align="left">最低兼容 Node.js 版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">6.0+</td>
+<td align="left">12.13.0</td>
+</tr>
+<tr>
+<td align="left">5.0+</td>
+<td align="left">10.13.0</td>
+</tr>
+<tr>
+<td align="left">4.1 - 4.2</td>
+<td align="left">8.10</td>
+</tr>
+<tr>
+<td align="left">4.0</td>
+<td align="left">8.6</td>
+</tr>
+<tr>
+<td align="left">3.3 - 3.9</td>
+<td align="left">6.9</td>
+</tr>
+<tr>
+<td align="left">3.2 - 3.3</td>
+<td align="left">0.12</td>
+</tr>
+<tr>
+<td align="left">3.0 - 3.1</td>
+<td align="left">0.10 or iojs</td>
+</tr>
+<tr>
+<td align="left">0.0.1 - 2.8</td>
+<td align="left">0.10</td>
+</tr>
+</tbody></table>
+<h1 id="如何建站："><a href="#如何建站：" class="headerlink" title="如何建站："></a>如何建站：</h1><h2 id="搭建Hexo脚手架"><a href="#搭建Hexo脚手架" class="headerlink" title="搭建Hexo脚手架"></a>搭建Hexo脚手架</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">hexo init &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash"><span class="built_in">cd</span> &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">npm install</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &lt;blog name&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="展示博客"><a href="#展示博客" class="headerlink" title="展示博客"></a>展示博客</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>Hexo具体使用细节请参考<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">中文官方文档</a></p>
+</blockquote>
+<h1 id="托管到GitHub-Pages"><a href="#托管到GitHub-Pages" class="headerlink" title="托管到GitHub Pages"></a>托管到<a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a></h1><h2 id="1-新建Repo"><a href="#1-新建Repo" class="headerlink" title="1. 新建Repo"></a>1. 新建Repo</h2><p>在GitHub上新建一个Repo，并且名称命名为username.github.io</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226213333028.png"></p>
+<h2 id="2-将本地代码库关联并Push到远程Repo"><a href="#2-将本地代码库关联并Push到远程Repo" class="headerlink" title="2. 将本地代码库关联并Push到远程Repo"></a>2. 将本地代码库关联并Push到远程Repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">git remote add origin git@github.com:FaithHan/faithhan.github..git</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">git push</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="GitHub-Actions实现自动部署"><a href="#GitHub-Actions实现自动部署" class="headerlink" title="GitHub Actions实现自动部署"></a>GitHub Actions实现自动部署</h1><p>每次修改完博客后都需要重新生成静态文件并部署，我们可以利用GitHub Actions实现自动化，只要将代码push到远端就能自动部署，真正实现”所写即所得”。</p>
+<p>我们需要在.github&#x2F;workflows路径下新建deploy.yml文件，并Push到Repo中</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">CI</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> [<span class="string">master</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">16.</span><span class="string">x</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&#x27;16&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">NPM</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.OS</span> <span class="string">&#125;&#125;-npm-cache</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            $&#123;&#123; runner.OS &#125;&#125;-npm-cache</span></span><br><span class="line"><span class="string"></span>      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br></pre></td></tr></table></figure>
+
+<p>每次master提交后，就会自动触发流水线，生成静态文件并部署<br><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226215237952.png"></p>
+<p>​    </p>
+<h1 id="自定义博客域名"><a href="#自定义博客域名" class="headerlink" title="自定义博客域名"></a>自定义博客域名</h1><p>GitHub Pages默认的博客域名是<strong>username.github.io</strong>,我们可以为其绑定自定义的域名，本人采用阿里云。</p>
+<h3 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1. 购买域名"></a>1. 购买域名</h3><p>在<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/domain/searchresult/#/?keyword=hanfeii&suffix=top">阿里云域名中心</a>购买域名（需要填写个人信息并实名认证,审核过后即可使用）</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226220823622.png"></p>
+<h3 id="2-解析设置"><a href="#2-解析设置" class="headerlink" title="2. 解析设置"></a>2. 解析设置</h3><p>在控制台打开自己想要配置的域名，进行解析配置</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226221842307.png" alt="image-20220226221842307"></p>
+<p>添加两条解析配置到github博客域名</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226222001037.png" alt="image-20220226222001037"></p>
+<h3 id="3-CNAME文件"><a href="#3-CNAME文件" class="headerlink" title="3. CNAME文件"></a>3. CNAME文件</h3><p>在source文件夹中新建CNAME文件（在source中新建CNAME可以防止每次部署文件被覆盖），填写自定义博客域名并提交，待生效后即可从自定义域名中访问博客</p>
+<h1 id="添加Https证书"><a href="#添加Https证书" class="headerlink" title="添加Https证书"></a>添加Https证书</h1><p>默认的自定义域名是不带Https的，为了能够在浏览器地址栏里看到小锁头，我们还要做接下来的配置</p>
+<h3 id="1-利用阿里云SSL证书"><a href="#1-利用阿里云SSL证书" class="headerlink" title="1. 利用阿里云SSL证书"></a>1. 利用阿里云SSL证书</h3><p>这里我们可以利用<a target="_blank" rel="noopener" href="https://yundun.console.aliyun.com/?spm=5176.12818093.ProductAndService--ali--widget-home-product-recent.dre0.5adc16d0fjTJAK&p=cas#/certExtend/free">阿里云数字证书管理服务</a>购买免费的SSL证书，购买完毕后点击创建证书会生成一个新的证书，之后点击证书申请，为我们新建的证书做一些配置。</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226222823971.png" alt="image-20220226222823971"></p>
+<p>将证书绑定到自己的域名下，并填写相关信息，审核生效后即可。</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226223107531.png" alt="image-20220226223107531"></p>
+<p>到这一步我们已经可以通过Https协议正常访问我们的自定义博客站点了。</p>
+<h3 id="2-开启强制Https访问"><a href="#2-开启强制Https访问" class="headerlink" title="2.  开启强制Https访问"></a>2.  开启强制Https访问</h3><p>如果我们想强制走Https访问，需要在GitHub里做些配置，只需要勾选设置中Enforce HTTPS 这个选项即可</p>
+<p><img src="/2022/02/26/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitHubPages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/image-20220226223528037.png" alt="image-20220226223528037"></p>
+<blockquote>
+<p>如果Https不生效，我们可以先把自定义域名去除，生效后重新加回来即可</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/24/%E4%BD%BF%E7%94%A8rinetd%E8%BD%AC%E5%8F%91/" rel="prev" title="使用rinetd转发TCP连接">
+                  <i class="fa fa-chevron-left"></i> 使用rinetd转发TCP连接
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hanfei</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
