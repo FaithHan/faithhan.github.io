@@ -120,12 +120,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -155,6 +155,87 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/04/23/Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bgrep/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanfei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | HanFei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/23/Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bgrep/" class="post-title-link" itemprop="url">Linux命令之grep</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-23 17:07:22 / 修改时间：17:41:26" itemprop="dateCreated datePublished" datetime="2022-04-23T17:07:22+08:00">2022-04-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="什么是grep"><a href="#什么是grep" class="headerlink" title="什么是grep"></a>什么是grep</h1><p>grep能够在给定文件中，搜索包含与给定的模式匹配的行，对于开发人员和系统管理员来说，它是 Linux 和类 Unix 系统上最有用的命令之一。</p>
+<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep [OPTION...] PATTERNS [FILE...] # 基本正则表达式</span><br><span class="line">grep [OPTION...] -e PATTERNS ... [FILE...] # 扩展正则表达式</span><br><span class="line">grep [OPTION...] -f PATTERN_FILE ... [FILE...] #匹配字符串</span><br></pre></td></tr></table></figure>
+<p><strong>PS</strong></p>
+<blockquote>
+<p> Basic vs Extended Regular Expressions In basic regular expressions the meta-characters ?, +, {, |, (, and )<br>lose their special meaning; instead use the backslashed versions \?, \+, \{, \|, \(, and \).</p>
+</blockquote>
+<h1 id="grep选项解释"><a href="#grep选项解释" class="headerlink" title="grep选项解释"></a>grep选项解释</h1><h3 id="Pattern-Syntax"><a href="#Pattern-Syntax" class="headerlink" title="Pattern Syntax"></a>Pattern Syntax</h3><p>-E 扩展正则表达式<br>-F 匹配字符串<br>-G 默认选项，基本正则表达式<br>-P Perl兼容正则表达式</p>
+<h3 id="Matching-Control"><a href="#Matching-Control" class="headerlink" title="Matching Control"></a>Matching Control</h3><p>-e 可以接多个正则，如果匹配其中一个，则该行匹配<br>-i 忽略大小写<br>-v 选择不匹配的行（条件反转）<br>-w 只选择匹配整个单词的行<br>-x 只选中匹配整个行的</p>
+<h3 id="General-Output-Control"><a href="#General-Output-Control" class="headerlink" title="General Output Control"></a>General Output Control</h3><p>-c 输出匹配行的数量<br>–color 将匹配的单词进行标记<br>-l 输出含有匹配行的文件（-L相反）<br>-o 只输出匹配项</p>
+<h3 id="Output-Line-Prefix-Control"><a href="#Output-Line-Prefix-Control" class="headerlink" title="Output Line Prefix Control"></a>Output Line Prefix Control</h3><p>-H 包括文件名，默认<br>-h 不包括文件名</p>
+<h3 id="Context-Line-Control"><a href="#Context-Line-Control" class="headerlink" title="Context Line Control"></a>Context Line Control</h3><p>-A NUM 输出匹配行后面NUM行<br>-B NUM 输出匹配行前面NUM行<br>-C NUM 输出匹配行前后NUM行</p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><p><a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man1/grep.1.html">官方手册</a><br><a target="_blank" rel="noopener" href="https://linuxize.com/post/regular-expressions-in-grep">Regular Expressions in Grep</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -200,7 +281,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-14 22:33:23" itemprop="dateModified" datetime="2022-03-14T22:33:23+08:00">2022-03-14</time>
+      <time title="修改时间：2022-04-23 17:41:26" itemprop="dateModified" datetime="2022-04-23T17:41:26+08:00">2022-04-23</time>
     </span>
 
   
@@ -298,7 +379,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-14 22:33:23" itemprop="dateModified" datetime="2022-03-14T22:33:23+08:00">2022-03-14</time>
+      <time title="修改时间：2022-04-23 17:41:26" itemprop="dateModified" datetime="2022-04-23T17:41:26+08:00">2022-04-23</time>
     </span>
 
   
@@ -421,7 +502,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-14 22:33:23" itemprop="dateModified" datetime="2022-03-14T22:33:23+08:00">2022-03-14</time>
+      <time title="修改时间：2022-04-23 17:41:26" itemprop="dateModified" datetime="2022-04-23T17:41:26+08:00">2022-04-23</time>
     </span>
 
   
@@ -587,7 +668,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-14 22:33:23" itemprop="dateModified" datetime="2022-03-14T22:33:23+08:00">2022-03-14</time>
+      <time title="修改时间：2022-04-23 17:41:26" itemprop="dateModified" datetime="2022-04-23T17:41:26+08:00">2022-04-23</time>
     </span>
 
   
@@ -678,7 +759,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-14 22:33:23" itemprop="dateModified" datetime="2022-03-14T22:33:23+08:00">2022-03-14</time>
+      <time title="修改时间：2022-04-23 17:41:26" itemprop="dateModified" datetime="2022-04-23T17:41:26+08:00">2022-04-23</time>
     </span>
 
   
