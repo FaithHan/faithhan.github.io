@@ -120,7 +120,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -164,6 +164,278 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/05/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanfei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | HanFei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/05/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">正则表达式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-05-04 14:26:31 / 修改时间：16:24:20" itemprop="dateCreated datePublished" datetime="2022-05-04T14:26:31+08:00">2022-05-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>正则表达式是用来匹配和处理文本的字符串</p>
+<h1 id="文字字符"><a href="#文字字符" class="headerlink" title="文字字符"></a>文字字符</h1><p>文本：Hello，my name is Ben</p>
+<p>regex： Ben</p>
+<p>匹配：Hello，my name is <strong>Ben</strong></p>
+<h1 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h1><p>\ ^ $ . | ? * + (  )  [  {</p>
+<p>如果想用元字符表示文本字符，则需要用 \ 进行转义（\ 用\\表示）</p>
+<h1 id="不可打印字符串"><a href="#不可打印字符串" class="headerlink" title="不可打印字符串"></a>不可打印字符串</h1><table>
+<thead>
+<tr>
+<th>\t</th>
+<th>Tab Character</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\r</td>
+<td>Return</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>new line feed</td>
+</tr>
+<tr>
+<td>\a</td>
+<td>bell</td>
+</tr>
+<tr>
+<td>\e</td>
+<td>Escape</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>Form feed</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>vertical tab</td>
+</tr>
+<tr>
+<td>\r\n</td>
+<td>windows terminate line</td>
+</tr>
+</tbody></table>
+<h1 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h1><p>匹配一组或一类字符中的一个</p>
+<ul>
+<li>[ae] 匹配a或者e</li>
+<li>[0-9] 匹配数字</li>
+<li>[0-9a-fA-F] 匹配数字或大小写字母</li>
+<li>[^x] 匹配除x之外的任意字符</li>
+</ul>
+<h1 id="简写字符类"><a href="#简写字符类" class="headerlink" title="简写字符类"></a>简写字符类</h1><ul>
+<li>\d 匹配数字</li>
+<li>\D 匹配非数字</li>
+<li>\w 匹配单词字符，等价于 <code>[A-Za-z0-9_]</code></li>
+<li>\W 匹配非单词字符</li>
+<li>\s 匹配空格</li>
+<li>\S 匹配非空格</li>
+</ul>
+<h1 id="匹配任意字符"><a href="#匹配任意字符" class="headerlink" title="匹配任意字符"></a>匹配任意字符</h1><p>“.”匹配任意字符</p>
+<p>gr.y 匹配 gray，grby，gr%y</p>
+<h1 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h1><p>锚点不匹配任何字符</p>
+<ul>
+<li>^匹配字符串开头</li>
+<li>$匹配字符串结尾</li>
+<li>\b匹配单词边界</li>
+</ul>
+<blockquote>
+<p>A word boundary is a position between a character that can be matched by <code>\w</code> and a character that cannot be matched by <code>\w</code>. <code>\b</code> also matches at the start and&#x2F;or end of the string if the first and&#x2F;or last characters in the string are word characters.<code>\B</code> matches at every position where <code>\b</code> cannot match</p>
+</blockquote>
+<h1 id="交替"><a href="#交替" class="headerlink" title="交替"></a>交替</h1><p>等价于or</p>
+<ul>
+<li>cat|dog 匹配 dog或者cat</li>
+<li>cat|dog food 匹配 cat 或者 dog food</li>
+<li>cat|dog|mouse|fish 匹配 cat，dog，mouse，fish</li>
+</ul>
+<h1 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h1><ul>
+<li><p>?匹配0或1</p>
+</li>
+<li><p>*匹配0或多次</p>
+</li>
+<li><p>+匹配1或多次</p>
+</li>
+<li><p>{n} 匹配n次</p>
+</li>
+<li><p>{n,m} 匹配n到m次</p>
+</li>
+<li><p>{n，}匹配n或者多次</p>
+<blockquote>
+<p>colou?r 匹配color或者colour</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="贪婪、懒惰的重复"><a href="#贪婪、懒惰的重复" class="headerlink" title="贪婪、懒惰的重复"></a>贪婪、懒惰的重复</h1><p>重复字符默认是贪婪的，会尽可能匹配最长字符，只有当不符合时才会回溯，加？会变为懒惰的</p>
+<blockquote>
+<p><code>&lt;.+&gt;</code> matches <code>&lt;EM&gt;first&lt;/EM&gt;</code> in <code>This is a &lt;EM&gt;first&lt;/EM&gt; test</code></p>
+<p><code>&lt;.+?&gt;</code> matches <code>&lt;EM&gt;</code> in the above string</p>
+</blockquote>
+<h1 id="分组和捕获"><a href="#分组和捕获" class="headerlink" title="分组和捕获"></a>分组和捕获</h1><p>用（）来进行分组</p>
+<p>Set(Value)? 匹配 Set or SetValue</p>
+<p><code>Set(?:Value)?</code>  用来创建非捕获组</p>
+<h1 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h1><p>表达式gray(\d)，\1表示最后的数字</p>
+<p>If your regex has multiple capturing groups, they are numbered counting their opening parentheses from left to right</p>
+<h1 id="命名分组和反向引用"><a href="#命名分组和反向引用" class="headerlink" title="命名分组和反向引用"></a>命名分组和反向引用</h1><p>当正则表达式包含许多分组时，追踪它们的编号将变得困难，用命名分组会更加便捷</p>
+<p>(?<mygroup>[abc])&#x3D;\k<mygroup> 等价于(<strong>[<strong>abc</strong>]</strong>)&#x3D;\1</mygroup></mygroup></p>
+<h1 id="环视（lookaround）"><a href="#环视（lookaround）" class="headerlink" title="环视（lookaround）"></a>环视（lookaround）</h1><p>环视是一种特殊的分组，其内部的字符串会正常进行match，但是引擎会放弃匹配的字符串，只会保存结果（也就是不会消耗字符串）</p>
+<p>,有时候会被称为0宽度匹配操作</p>
+<p>环视的分类：</p>
+<ul>
+<li>(?&#x3D;) 肯定向前环视</li>
+<li>(?!) 否定向前环视</li>
+<li>(?&lt;&#x3D;) 肯定向后环视</li>
+<li>(?&lt;!) 否定向后环视</li>
+</ul>
+<p>demo：</p>
+<blockquote>
+<p><code>q(?=u)</code> matches the <code>q</code> in <code>question</code>, but not in <code>Iraq</code>. This is positive lookahead. The <code>u</code> is not part of the overall regex match. The lookahead matches at each position in the string before a <code>u</code>.</p>
+<p><code>q(?!u)</code> matches <code>q</code> in <code>Iraq</code> but not in <code>question</code>. This is negative lookahead. The tokens inside the lookahead are attempted, their match is discarded, and the result is inverted.</p>
+<p>To look backwards, use lookbehind. The positive lookbehind <code>(?&lt;=a)b</code> matches the <code>b</code> in <code>abc</code>. The negative lookbehind <code>(?&lt;!a)b</code> fails to match <code>abc</code>.</p>
+</blockquote>
+<p>PS：</p>
+<p>向前查看模式的长度是可变的，其中可以包含+等量词，非常灵活；但向后查看模式只能是固定长度，几乎所有正则表达式实现都有此限制。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/05/02/Linux%E5%91%BD%E4%BB%A4lsof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanfei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | HanFei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/05/02/Linux%E5%91%BD%E4%BB%A4lsof/" class="post-title-link" itemprop="url">Linux命令lsof</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-02 21:57:06" itemprop="dateCreated datePublished" datetime="2022-05-02T21:57:06+08:00">2022-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="它可以做什么"><a href="#它可以做什么" class="headerlink" title="它可以做什么"></a>它可以做什么</h1><p>List all Open Files</p>
+<h1 id="命令选项"><a href="#命令选项" class="headerlink" title="命令选项"></a>命令选项</h1><ul>
+<li>-i 列出所有网络连接</li>
+<li>-i TCP:1-1024 列出所有TCP连接端口号范围为1-1024</li>
+<li>-i 4， -i 6 列出IPv4或这IPv6打开的文件</li>
+<li>-i TCP:22 列出TCP端口22</li>
+<li>-n 显示IP，可以加速网路打开连接的显示速度</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/05/01/Linux%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4netstat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -192,9 +464,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-05-01 22:30:22 / 修改时间：22:55:51" itemprop="dateCreated datePublished" datetime="2022-05-01T22:30:22+08:00">2022-05-01</time>
+      <time title="创建时间：2022-05-01 22:30:22" itemprop="dateCreated datePublished" datetime="2022-05-01T22:30:22+08:00">2022-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
     </span>
 
   
@@ -284,7 +562,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-01 22:55:51" itemprop="dateModified" datetime="2022-05-01T22:55:51+08:00">2022-05-01</time>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
     </span>
 
   
@@ -368,7 +646,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-01 22:55:51" itemprop="dateModified" datetime="2022-05-01T22:55:51+08:00">2022-05-01</time>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
     </span>
 
   
@@ -492,7 +770,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-01 22:55:51" itemprop="dateModified" datetime="2022-05-01T22:55:51+08:00">2022-05-01</time>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
     </span>
 
   
@@ -579,7 +857,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-01 22:55:51" itemprop="dateModified" datetime="2022-05-01T22:55:51+08:00">2022-05-01</time>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
     </span>
 
   
@@ -677,7 +955,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-01 22:55:51" itemprop="dateModified" datetime="2022-05-01T22:55:51+08:00">2022-05-01</time>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
     </span>
 
   
@@ -800,7 +1078,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-01 22:55:51" itemprop="dateModified" datetime="2022-05-01T22:55:51+08:00">2022-05-01</time>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
     </span>
 
   
@@ -966,7 +1244,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-01 22:55:51" itemprop="dateModified" datetime="2022-05-01T22:55:51+08:00">2022-05-01</time>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
     </span>
 
   
@@ -1013,118 +1291,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/02/23/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="hanfei">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HanFei">
-      <meta itemprop="description" content="My Personal Blog">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | HanFei">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/23/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">哈希函数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-02-23 14:40:31" itemprop="dateCreated datePublished" datetime="2022-02-23T14:40:31+08:00">2022-02-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-01 22:55:51" itemprop="dateModified" datetime="2022-05-01T22:55:51+08:00">2022-05-01</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>加密散列函数( CHF ) 是一种数学算法，可将任意大小的数据（通常称为“消息”）映射到固定大小的位数组（“散列值”、“散列”或“消息摘要” ）。它是一种单向函数，即实际上不可能对其计算求逆或逆向的函数。<br>加密散列函数必须是确定性的，这意味着相同的消息总是产生相同的散列。理想情况下，它还应该具有以下属性：</p>
-<ul>
-<li>可以快速计算任何给定消息的哈希值</li>
-<li>生成产生给定哈希值的消息是不可行的（即反转生成给定哈希值的过程）</li>
-<li>找到具有相同哈希值的两条不同消息是不可行的</li>
-<li>对消息的微小更改应该会如此广泛地更改哈希值，以至于新的哈希值看起来与旧的哈希值不相关</li>
-</ul>
-<h1 id="HASH算法分类和对应的位长"><a href="#HASH算法分类和对应的位长" class="headerlink" title="HASH算法分类和对应的位长"></a>HASH算法分类和对应的位长</h1><table>
-<thead>
-<tr>
-<th>MD5</th>
-<th>SHA1</th>
-<th>SHA224</th>
-<th>SHA256</th>
-<th>SHA384</th>
-<th>SHA512</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>128</td>
-<td>160</td>
-<td>224</td>
-<td>256</td>
-<td>384</td>
-<td>512</td>
-</tr>
-</tbody></table>
-<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><ul>
-<li>数字签名、消息认证码(MAC)等认证中</li>
-<li>在hash table中索引数据</li>
-<li>检测重复数据或唯一标识文件</li>
-<li>作为校验和检测意外数据损坏</li>
-</ul>
-<h1 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * inspired by Apache Commons lang3 DigestUtils</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HashUtils</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">STREAM_BUFFER_LENGTH</span> <span class="operator">=</span> <span class="number">2048</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] md5(<span class="type">byte</span>[] data) &#123;</span><br><span class="line">        <span class="keyword">return</span> getDigest(MD5).digest(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">md5Hex</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(getDigest(MD5).digest(data));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha1(<span class="type">byte</span>[] data) &#123;</span><br><span class="line">        <span class="keyword">return</span> getDigest(SHA_1).digest(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha1Hex</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(getDigest(SHA_1).digest(data));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha224(<span class="type">byte</span>[] data) &#123;</span><br><span class="line">        <span class="keyword">return</span> getDigest(SHA_224).digest(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha224Hex</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(getDigest(SHA_224).digest(data));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha256(<span class="type">byte</span>[] data) &#123;</span><br><span class="line">        <span class="keyword">return</span> getDigest(SHA_256).digest(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha256Hex</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(getDigest(SHA_256).digest(data));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha384(<span class="type">byte</span>[] data) &#123;</span><br><span class="line">        <span class="keyword">return</span> getDigest(SHA_384).digest(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha384Hex</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(getDigest(SHA_384).digest(data));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha512(<span class="type">byte</span>[] data) &#123;</span><br><span class="line">        <span class="keyword">return</span> getDigest(SHA_512).digest(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha512Hex</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(getDigest(SHA_512).digest(data));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] md5(InputStream inputStream) <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> updateDigest(getDigest(MD5), inputStream).digest();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">md5Hex</span><span class="params">(InputStream inputStream)</span> <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(updateDigest(getDigest(MD5), inputStream).digest());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha1(InputStream inputStream) <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> updateDigest(getDigest(SHA_1), inputStream).digest();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha1Hex</span><span class="params">(InputStream inputStream)</span> <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(updateDigest(getDigest(SHA_1), inputStream).digest());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha224(InputStream inputStream) <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> updateDigest(getDigest(SHA_224), inputStream).digest();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha224Hex</span><span class="params">(InputStream inputStream)</span> <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(updateDigest(getDigest(SHA_224), inputStream).digest());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha256(InputStream inputStream) <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> updateDigest(getDigest(SHA_256), inputStream).digest();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha256Hex</span><span class="params">(InputStream inputStream)</span> <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(updateDigest(getDigest(SHA_256), inputStream).digest());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha384(InputStream inputStream) <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> updateDigest(getDigest(SHA_384), inputStream).digest();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha384Hex</span><span class="params">(InputStream inputStream)</span> <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(updateDigest(getDigest(SHA_384), inputStream).digest());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">byte</span>[] sha512(InputStream inputStream) <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> updateDigest(getDigest(SHA_512), inputStream).digest();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">sha512Hex</span><span class="params">(InputStream inputStream)</span> <span class="keyword">throws</span> IOException&#123;</span><br><span class="line">        <span class="keyword">return</span> HexUtils.toHexString(updateDigest(getDigest(SHA_512), inputStream).digest());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> MessageDigest <span class="title function_">getDigest</span><span class="params">(String hashAlgorithm)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> MessageDigest.getInstance(hashAlgorithm);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> MessageDigest <span class="title function_">updateDigest</span><span class="params">(<span class="keyword">final</span> MessageDigest digest, <span class="keyword">final</span> InputStream inputStream)</span></span><br><span class="line">            <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="type">byte</span>[] buffer = <span class="keyword">new</span> <span class="title class_">byte</span>[STREAM_BUFFER_LENGTH];</span><br><span class="line">        <span class="type">int</span> <span class="variable">read</span> <span class="operator">=</span> inputStream.read(buffer, <span class="number">0</span>, STREAM_BUFFER_LENGTH);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (read &gt; -<span class="number">1</span>) &#123;</span><br><span class="line">            digest.update(buffer, <span class="number">0</span>, read);</span><br><span class="line">            read = inputStream.read(buffer, <span class="number">0</span>, STREAM_BUFFER_LENGTH);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> digest;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 </div>
   </main>

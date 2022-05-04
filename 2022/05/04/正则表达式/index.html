@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hanfeii.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="定义正则表达式是用来匹配和处理文本的字符串 文字字符文本：Hello，my name is Ben regex： Ben 匹配：Hello，my name is Ben 元字符\ ^ $ . | ? * + (  )  [  { 如果想用元字符表示文本字符，则需要用 \ 进行转义（\ 用\\表示） 不可打印字符串   \t Tab Character    \r Return   \n new l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="https://hanfeii.top/2022/05/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="HanFei">
+<meta property="og:description" content="定义正则表达式是用来匹配和处理文本的字符串 文字字符文本：Hello，my name is Ben regex： Ben 匹配：Hello，my name is Ben 元字符\ ^ $ . | ? * + (  )  [  { 如果想用元字符表示文本字符，则需要用 \ 进行转义（\ 用\\表示） 不可打印字符串   \t Tab Character    \r Return   \n new l">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-04T06:26:31.000Z">
+<meta property="article:modified_time" content="2022-05-04T08:24:20.679Z">
+<meta property="article:author" content="hanfei">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://hanfeii.top/2022/05/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://hanfeii.top/2022/05/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/","path":"2022/05/04/正则表达式/","title":"正则表达式"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>正则表达式 | HanFei</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">HanFei</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">走好脚下的路</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E5%AD%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">文字字符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-number">3.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E6%89%93%E5%8D%B0%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">4.</span> <span class="nav-text">不可打印字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">字符类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E5%86%99%E5%AD%97%E7%AC%A6%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">简写字符类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E4%BB%BB%E6%84%8F%E5%AD%97%E7%AC%A6"><span class="nav-number">7.</span> <span class="nav-text">匹配任意字符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%94%9A%E7%82%B9"><span class="nav-number">8.</span> <span class="nav-text">锚点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%A4%E6%9B%BF"><span class="nav-number">9.</span> <span class="nav-text">交替</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8D%E5%A4%8D"><span class="nav-number">10.</span> <span class="nav-text">重复</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%AA%E5%A9%AA%E3%80%81%E6%87%92%E6%83%B0%E7%9A%84%E9%87%8D%E5%A4%8D"><span class="nav-number">11.</span> <span class="nav-text">贪婪、懒惰的重复</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E5%92%8C%E6%8D%95%E8%8E%B7"><span class="nav-number">12.</span> <span class="nav-text">分组和捕获</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E5%BC%95%E7%94%A8"><span class="nav-number">13.</span> <span class="nav-text">反向引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E5%90%8D%E5%88%86%E7%BB%84%E5%92%8C%E5%8F%8D%E5%90%91%E5%BC%95%E7%94%A8"><span class="nav-number">14.</span> <span class="nav-text">命名分组和反向引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E8%A7%86%EF%BC%88lookaround%EF%BC%89"><span class="nav-number">15.</span> <span class="nav-text">环视（lookaround）</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">hanfei</p>
+  <div class="site-description" itemprop="description">My Personal Blog</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/05/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanfei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="正则表达式 | HanFei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          正则表达式
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-05-04 14:26:31 / 修改时间：16:24:20" itemprop="dateCreated datePublished" datetime="2022-05-04T14:26:31+08:00">2022-05-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>正则表达式是用来匹配和处理文本的字符串</p>
+<h1 id="文字字符"><a href="#文字字符" class="headerlink" title="文字字符"></a>文字字符</h1><p>文本：Hello，my name is Ben</p>
+<p>regex： Ben</p>
+<p>匹配：Hello，my name is <strong>Ben</strong></p>
+<h1 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h1><p>\ ^ $ . | ? * + (  )  [  {</p>
+<p>如果想用元字符表示文本字符，则需要用 \ 进行转义（\ 用\\表示）</p>
+<h1 id="不可打印字符串"><a href="#不可打印字符串" class="headerlink" title="不可打印字符串"></a>不可打印字符串</h1><table>
+<thead>
+<tr>
+<th>\t</th>
+<th>Tab Character</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\r</td>
+<td>Return</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>new line feed</td>
+</tr>
+<tr>
+<td>\a</td>
+<td>bell</td>
+</tr>
+<tr>
+<td>\e</td>
+<td>Escape</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>Form feed</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>vertical tab</td>
+</tr>
+<tr>
+<td>\r\n</td>
+<td>windows terminate line</td>
+</tr>
+</tbody></table>
+<h1 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h1><p>匹配一组或一类字符中的一个</p>
+<ul>
+<li>[ae] 匹配a或者e</li>
+<li>[0-9] 匹配数字</li>
+<li>[0-9a-fA-F] 匹配数字或大小写字母</li>
+<li>[^x] 匹配除x之外的任意字符</li>
+</ul>
+<h1 id="简写字符类"><a href="#简写字符类" class="headerlink" title="简写字符类"></a>简写字符类</h1><ul>
+<li>\d 匹配数字</li>
+<li>\D 匹配非数字</li>
+<li>\w 匹配单词字符，等价于 <code>[A-Za-z0-9_]</code></li>
+<li>\W 匹配非单词字符</li>
+<li>\s 匹配空格</li>
+<li>\S 匹配非空格</li>
+</ul>
+<h1 id="匹配任意字符"><a href="#匹配任意字符" class="headerlink" title="匹配任意字符"></a>匹配任意字符</h1><p>“.”匹配任意字符</p>
+<p>gr.y 匹配 gray，grby，gr%y</p>
+<h1 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h1><p>锚点不匹配任何字符</p>
+<ul>
+<li>^匹配字符串开头</li>
+<li>$匹配字符串结尾</li>
+<li>\b匹配单词边界</li>
+</ul>
+<blockquote>
+<p>A word boundary is a position between a character that can be matched by <code>\w</code> and a character that cannot be matched by <code>\w</code>. <code>\b</code> also matches at the start and&#x2F;or end of the string if the first and&#x2F;or last characters in the string are word characters.<code>\B</code> matches at every position where <code>\b</code> cannot match</p>
+</blockquote>
+<h1 id="交替"><a href="#交替" class="headerlink" title="交替"></a>交替</h1><p>等价于or</p>
+<ul>
+<li>cat|dog 匹配 dog或者cat</li>
+<li>cat|dog food 匹配 cat 或者 dog food</li>
+<li>cat|dog|mouse|fish 匹配 cat，dog，mouse，fish</li>
+</ul>
+<h1 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h1><ul>
+<li><p>?匹配0或1</p>
+</li>
+<li><p>*匹配0或多次</p>
+</li>
+<li><p>+匹配1或多次</p>
+</li>
+<li><p>{n} 匹配n次</p>
+</li>
+<li><p>{n,m} 匹配n到m次</p>
+</li>
+<li><p>{n，}匹配n或者多次</p>
+<blockquote>
+<p>colou?r 匹配color或者colour</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="贪婪、懒惰的重复"><a href="#贪婪、懒惰的重复" class="headerlink" title="贪婪、懒惰的重复"></a>贪婪、懒惰的重复</h1><p>重复字符默认是贪婪的，会尽可能匹配最长字符，只有当不符合时才会回溯，加？会变为懒惰的</p>
+<blockquote>
+<p><code>&lt;.+&gt;</code> matches <code>&lt;EM&gt;first&lt;/EM&gt;</code> in <code>This is a &lt;EM&gt;first&lt;/EM&gt; test</code></p>
+<p><code>&lt;.+?&gt;</code> matches <code>&lt;EM&gt;</code> in the above string</p>
+</blockquote>
+<h1 id="分组和捕获"><a href="#分组和捕获" class="headerlink" title="分组和捕获"></a>分组和捕获</h1><p>用（）来进行分组</p>
+<p>Set(Value)? 匹配 Set or SetValue</p>
+<p><code>Set(?:Value)?</code>  用来创建非捕获组</p>
+<h1 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h1><p>表达式gray(\d)，\1表示最后的数字</p>
+<p>If your regex has multiple capturing groups, they are numbered counting their opening parentheses from left to right</p>
+<h1 id="命名分组和反向引用"><a href="#命名分组和反向引用" class="headerlink" title="命名分组和反向引用"></a>命名分组和反向引用</h1><p>当正则表达式包含许多分组时，追踪它们的编号将变得困难，用命名分组会更加便捷</p>
+<p>(?<mygroup>[abc])&#x3D;\k<mygroup> 等价于(<strong>[<strong>abc</strong>]</strong>)&#x3D;\1</mygroup></mygroup></p>
+<h1 id="环视（lookaround）"><a href="#环视（lookaround）" class="headerlink" title="环视（lookaround）"></a>环视（lookaround）</h1><p>环视是一种特殊的分组，其内部的字符串会正常进行match，但是引擎会放弃匹配的字符串，只会保存结果（也就是不会消耗字符串）</p>
+<p>,有时候会被称为0宽度匹配操作</p>
+<p>环视的分类：</p>
+<ul>
+<li>(?&#x3D;) 肯定向前环视</li>
+<li>(?!) 否定向前环视</li>
+<li>(?&lt;&#x3D;) 肯定向后环视</li>
+<li>(?&lt;!) 否定向后环视</li>
+</ul>
+<p>demo：</p>
+<blockquote>
+<p><code>q(?=u)</code> matches the <code>q</code> in <code>question</code>, but not in <code>Iraq</code>. This is positive lookahead. The <code>u</code> is not part of the overall regex match. The lookahead matches at each position in the string before a <code>u</code>.</p>
+<p><code>q(?!u)</code> matches <code>q</code> in <code>Iraq</code> but not in <code>question</code>. This is negative lookahead. The tokens inside the lookahead are attempted, their match is discarded, and the result is inverted.</p>
+<p>To look backwards, use lookbehind. The positive lookbehind <code>(?&lt;=a)b</code> matches the <code>b</code> in <code>abc</code>. The negative lookbehind <code>(?&lt;!a)b</code> fails to match <code>abc</code>.</p>
+</blockquote>
+<p>PS：</p>
+<p>向前查看模式的长度是可变的，其中可以包含+等量词，非常灵活；但向后查看模式只能是固定长度，几乎所有正则表达式实现都有此限制。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/05/02/Linux%E5%91%BD%E4%BB%A4lsof/" rel="prev" title="Linux命令lsof">
+                  <i class="fa fa-chevron-left"></i> Linux命令lsof
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hanfei</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

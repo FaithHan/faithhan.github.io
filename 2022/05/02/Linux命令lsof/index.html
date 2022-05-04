@@ -21,25 +21,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"hanfeii.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="My Personal Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HanFei">
-<meta property="og:url" content="https://hanfeii.top/tags/Linux/index.html">
+    <meta name="description" content="它可以做什么List all Open Files 命令选项 -i 列出所有网络连接 -i TCP:1-1024 列出所有TCP连接端口号范围为1-1024 -i 4， -i 6 列出IPv4或这IPv6打开的文件 -i TCP:22 列出TCP端口22 -n 显示IP，可以加速网路打开连接的显示速度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令lsof">
+<meta property="og:url" content="https://hanfeii.top/2022/05/02/Linux%E5%91%BD%E4%BB%A4lsof/index.html">
 <meta property="og:site_name" content="HanFei">
-<meta property="og:description" content="My Personal Blog">
+<meta property="og:description" content="它可以做什么List all Open Files 命令选项 -i 列出所有网络连接 -i TCP:1-1024 列出所有TCP连接端口号范围为1-1024 -i 4， -i 6 列出IPv4或这IPv6打开的文件 -i TCP:22 列出TCP端口22 -n 显示IP，可以加速网路打开连接的显示速度">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-02T13:57:06.000Z">
+<meta property="article:modified_time" content="2022-05-04T08:24:20.675Z">
 <meta property="article:author" content="hanfei">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://hanfeii.top/tags/Linux/">
+<link rel="canonical" href="https://hanfeii.top/2022/05/02/Linux%E5%91%BD%E4%BB%A4lsof/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/Linux/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://hanfeii.top/2022/05/02/Linux%E5%91%BD%E4%BB%A4lsof/","path":"2022/05/02/Linux命令lsof/","title":"Linux命令lsof"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: Linux | HanFei</title>
+<title>Linux命令lsof | HanFei</title>
   
 
 
@@ -95,7 +97,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -108,6 +110,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%83%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">它可以做什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%80%89%E9%A1%B9"><span class="nav-number">2.</span> <span class="nav-text">命令选项</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -154,50 +157,105 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Linux
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hanfeii.top/2022/05/02/Linux%E5%91%BD%E4%BB%A4lsof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hanfei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HanFei">
+      <meta itemprop="description" content="My Personal Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Linux命令lsof | HanFei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux命令lsof
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-02 21:57:06" itemprop="dateCreated datePublished" datetime="2022-05-02T21:57:06+08:00">2022-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-04 16:24:20" itemprop="dateModified" datetime="2022-05-04T16:24:20+08:00">2022-05-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="它可以做什么"><a href="#它可以做什么" class="headerlink" title="它可以做什么"></a>它可以做什么</h1><p>List all Open Files</p>
+<h1 id="命令选项"><a href="#命令选项" class="headerlink" title="命令选项"></a>命令选项</h1><ul>
+<li>-i 列出所有网络连接</li>
+<li>-i TCP:1-1024 列出所有TCP连接端口号范围为1-1024</li>
+<li>-i 4， -i 6 列出IPv4或这IPv6打开的文件</li>
+<li>-i TCP:22 列出TCP端口22</li>
+<li>-n 显示IP，可以加速网路打开连接的显示速度</li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-24T14:40:31+08:00"
-              content="2022-02-24">
-          02-24
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/24/%E4%BD%BF%E7%94%A8rinetd%E8%BD%AC%E5%8F%91/" itemprop="url">
-            <span itemprop="name">使用rinetd转发TCP连接</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/05/01/Linux%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4netstat/" rel="prev" title="Linux网络命令netstat">
+                  <i class="fa fa-chevron-left"></i> Linux网络命令netstat
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/05/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="next" title="正则表达式">
+                  正则表达式 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
+
 
 </div>
   </main>
